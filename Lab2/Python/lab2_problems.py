@@ -124,8 +124,8 @@ class EightQueensState():
     def f1(self):
         if self.cost_f1 == None:
             self.cost_f1 = (np.unique(self.field, return_counts=True)[1] - 1).sum() + (
-                np.unique(np.arange(8) - s.field, return_counts=True)[1] - 1).sum() + (
-                np.unique(np.arange(7, -1, -1) - s.field, return_counts=True)[1] - 1).sum()
+                np.unique(np.arange(8) - self.field, return_counts=True)[1] - 1).sum() + (
+                np.unique(np.arange(7, -1, -1) - self.field, return_counts=True)[1] - 1).sum()
         return self.cost_f1
     
     def f2(self):
